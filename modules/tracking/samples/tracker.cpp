@@ -231,7 +231,7 @@ int main( int argc, char** argv ){
       outputFPS = (frameCounter * freq)/timeTotal;
       curTime = cap.get(CAP_PROP_POS_MSEC)/1000;
 
-      outputLabel = format("Object Detection with YOLOv3 ----- Current Time: %.2f ----- FPS: %.2f", curTime, outputFPS);
+      outputLabel = "Object Detection with YOLOv3, Tracking with " + tracker_algorithm + format(" ----- Current Time: %.2f ----- FPS: %.2f", curTime, outputFPS);
 
       putText(image, outputLabel, Point(20,20), FONT_HERSHEY_SIMPLEX, 0.75, Scalar(0,0,0),1);
 
